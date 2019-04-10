@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SUMMARY</title>
+<style>
+p {
+  text-align:justify;
+  word-spacing: 1px;
+   margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size:25px;
+  font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body style="background-color:rgb(80,80,80)">
+<center>
+&nbsp;&nbsp;<form method="POST" action="/">
+
+       <input class="btn btn-primary" type="submit" value="Home">
+
+   </form>
+</center>
+<br>
+<fieldset style="background-color:silver">
+    <legend ><h1 style="background-color:black; color:white">Summary</h1></legend>
+<font size="4"><p>
+<b>{% for i in summ: %}
+{% if(i=='\n') %}
+    <br>
+{%endif%}
+{% if(i==' ') %}
+{%endif%}
+{% print i %}
+    {% endfor %}</b>
+.</p>
+</font>
+</fieldset>
+<br><br>
+<fieldset style="background-color:silver; border:5px;">
+<legend><h1 style="background-color:black; color:white">Original Text</h1></legend>
+    <font size="4"><p >{{ text }}</p></font>
+</fieldset>
+<br>
+<center>
+<form method="POST" action="/">
+
+       <input class="btn btn-primary" type="submit" value="Home">
+
+   </form>
+</center>
+<br><br>
+</body>
+</html>

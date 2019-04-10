@@ -1,0 +1,191 @@
+ <html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1{
+  position: relative;
+ /* opacity: 0.85; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("static/original.gif");
+  height: 95%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 60px;
+}
+
+.caption span.border {
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(50,50,50);
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+</style>
+
+    <title>TEXT</title>
+</head>
+<div style="background-color:black;">
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<a href="#sum" class="bgimg-1">
+<div class="bgimg-1">
+
+  <div class="caption">
+    TEXT SUMMARIZER
+  </div>
+</div>
+</a>
+
+<br><br>
+<a name="sum">
+<div style="background-image: linear-gradient(black,grey,black)">
+    <br>
+<div style="margin:30px">
+    <h2 style="color:white">Enter text to summarize:</h2>
+
+   <form method="POST" action="/summarize-text">
+       <div class="form-group">
+           <textarea name="text" rows="15" cols="120" style="background-color:silver; font-size:18px;">
+
+           </textarea>
+       </div>
+       <p style="font-size:20px">Enter number of sentences :
+       <input type="text" name="lines" style="background-color:silver;" size="3"><br><br>
+       <input class="btn btn-primary" type="submit" value="Summarize">
+       </p>
+   </form>
+</div>
+</div>
+
+
+<br>
+<center><h1 style="color:white" >OR</h1></center>
+    <br><br>
+<div style="background-image: linear-gradient(black,grey,black);">
+    <br>
+    <div style="margin-left:400px">
+
+ <form method="POST" action="/summarize-file" enctype = "multipart/form-data">
+       <div class="form-group" style="color:white" >
+           <b style="font-size: 30px">SELECT FILE : </b><input type="file" name="file"><br><br>
+       Enter number of sentences:
+     <input type="text" name="lines" style="background-color:silver;" size="3"><br>
+       </div>
+           <input class="btn btn-primary" type="submit" value="Summarize">
+   </form>
+    </div>
+    <br>
+</div>
+    <br><bR>
+ <a name="about"></a>
+<br>
+<hr>
+<br>
+<div style="margin:40px">
+ <h1> <center>ABOUT:</center></h1>
+<h2> WHAT ?</h2>
+<p style="font-size:17px">Text summarization is the process of distilling the most
+    important information from a source (or sources) to produce an abridged
+    version for a particular user (or users) and task (or tasks).
+</p>
+<br>
+<h2>WHY ?</h2>
+    <p style="font-size:17px">
+<ul>
+    <li>Summaries reduce reading time.</li>
+    <li>When researching documents, summaries make the selection process easier.</li>
+    <li>Automatic summarization improves the effectiveness of indexing.</li>
+    <li>Automatic summarization algorithms are less biased than human summarizers.</li>
+    <li>Using automatic or semi-automatic summarization systems enables commercial abstract services to increase
+        the number of text documents they are able to process.</li>
+</ul>
+</p>
+</div>
+
+ <br>
+ <br>
+ <hr>
+<br><br><br>
+<h1> <center>CONTACT:</center></h1>
+<br>
+<table align="center" width="80%" style="color:silver; word-spacing:2px; letter-spacing:1px;">
+
+    <tr><br>
+        <td align="center" style="padding:20px; border:2px solid grey;"><br>
+            <h2><u>SAURAV SAHA</u></h2>
+            <br>SRM Institute of Science & Technology
+            <br>Navi Mumbai (M.H.)
+            <br>G-mail : sauravsaha@gmail.com
+        </td>
+         <td width="10%"></td>
+        <td align="center" style="padding:20px; border:2px solid darkgrey;"><br>
+            <h2><u>RAGHAV RATHI</u></h2>
+            <br>SRM Institute of Science & Technology
+            <br>Durg ( C.G.)
+            <br>G-mail : raghavrathi@gmail.com
+        </td>
+
+    </tr>
+</table>
+<a name="contact"></a>
+<br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>File</title>
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+ background-image:linear-gradient(black,grey,black);
+ height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<div  class="bg">
+<br><br>
+
+
+    <h2 style="color:white">Enter text to summarize:</h2>
+
+   <form method="POST" action="/summarize-text">
+       <div class="form-group">
+           <textarea name="text" rows="15" cols="120" style="background-color:silver; font-size:18px;">
+
+           </textarea>
+
+       <p style="font-size:20px; color:white;">Enter number of sentences :
+       <input type="text" name="lines" style="background-color:silver;" size="3"><br><br>
+       <input class="btn btn-primary" type="submit" value="Summarize">
+       </p>
+   </form>
+</div>
+
+</body>
+</html>
